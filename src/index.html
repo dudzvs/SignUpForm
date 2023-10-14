@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bark Buddies</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <div class="left-container">
+      <h1><img class="secondIco" src="./assets/latido.png" alt="">Bark Buddies <sup>&trade;</sup></h1>
+      <img class="mainIco" src="./assets/dog.png" alt="">
+    </div>
+    <div class="right-container">
+      <header>
+        <h3>Yay, puppies! Ensure your pup get the best care!</h3>        
+      </header>
+
+      <form action="">
+        <div class="form-container">
+          <div class="input-wrapper">
+            <label for="name">Name</label>
+            <input id="name" type="text" name="name" required>
+          </div>
+
+          <div class="input-wrapper">
+            <label for="breed">Breed</label>
+            <input id="breed" type="text" name="breed" required>
+          </div>
+
+          <div class="input-wrapper">
+            <label for='pets-birthday'>Birthday</label>
+            <input id='pets-birthday' placeholder='MM/DD/YYYY' type='date'>
+          </div>
+
+          <div class="input-wrapper">
+            <label for='pet-gender-female'>Gender</label>
+            <div class="radio-container">
+              <input checked='' id='pet-gender-female' name='pet-gender' type='radio' value='female'>
+              <label for='pet-gender-female'>Female</label>
+              <input id='pet-gender-male' name='pet-gender' type='radio' value='male'>
+              <label for='pet-gender-male'>Male</label>
+            </div>
+          </div>
+
+          <div class="input-wrapper">
+            <label for='pet-spayed'>Spayed or Neutered</label>
+            <div class="radio-container">
+              <input type="radio" id="pet-spayed" name='spayed-neutered' value="spayed">
+              <label for='pet-spayed'>Spayed</label>
+              <input id='pet-neutered' name='spayed-neutered' type='radio' value='neutered'>
+              <label for='pet-neutered'>Neutered</label>
+            </div>
+          </div>
+
+          <div class="input-wrapper">
+            <label for='pet-weight-0-25'>Weight</label>
+            <div class="radio-container">
+              <input checked='' id='pet-weight-0-25' name='pet-weight' type='radio' value='0-25'>
+              <label for='pet-weight-0-25'>0-25 lbs</label>
+              <input id='pet-weight-25-50' name='pet-weight' type='radio' value='25-50'>
+              <label for='pet-weight-25-50'>25-50 lbs</label>
+              <input id='pet-weight-50-100' name='pet-weight' type='radio' value='50-100'>
+              <label for='pet-weight-50-100'>50-100 lbs</label>
+              <input id='pet-weight-100-plus' name='pet-weight' type='radio' value='100+'>
+              <label for='pet-weight-100-plus'>100+ lbs</label>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </main>
+</body>
+</html>
