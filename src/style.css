@@ -10,16 +10,15 @@
 }
 
 body {
-  overflow: hidden;
   font-size: 1.6rem;
-  
   background: gray;
+  overflow: hidden;
+  height: 100vh;
 }
 
 .container {
   display: grid;
   grid-template-columns: calc(100% - 70%) auto;
-  height: 100vh;
   width: 100%;
 }
 
@@ -38,14 +37,71 @@ body {
   align-items: center;
 }
 
+.right-container {
+  display: grid;
+  grid-template-areas: "." ".";
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px auto;
+}
+
+.form-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: gray(250, 219, 181, 0.534);
+  border-radius: 10px;
+  gap: 40px;
+  margin-top: 40px;
+  margin-bottom: 155px;
+  padding: 100px;
+  box-shadow: -9px -1px 21px 4px rgba(0,0,0,0.55);
+  -webkit-box-shadow: -9px -1px 21px 4px rgba(0,0,0,0.55);
+  -moz-box-shadow: -9px -1px 21px 4px rgba(0,0,0,0.55);
+}
+
+.right-container input, .right-container label {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.radio-container {
+  background: bisque;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding: 5px;
+  display: flex;
+  justify-content: space-evenly;
+  width: max-content;
+}
+
+.radio-container label {
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  display: inline-block;
+  height: 26px;
+  line-height: 26px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  transition: 0.2s all ease-in-out;
+  width: 80px;
+}
+
 
 h3 {
-  padding: 10px;
+  padding: 40px;
   font-size: 5rem;
-  text-align: center;
-  margin-top: 60px;
+  text-align: left;
+  margin-top: 10px;
   font-weight: 600;
-  color: bisque;
+  color: rgb(255, 209, 153);
+}
+
+label {
+  margin-bottom: 8px;
 }
 
 .mainIco{
@@ -59,4 +115,29 @@ h3 {
 
 .secondIco {
   width: 50px;
+}
+
+input {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  height: 38px;
+  line-height: 38px;
+  padding-left: 5px;
+  background-color: bisque;
+
+}
+
+input[type=radio] {
+  display: none;
+}
+
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.radio-container input[type=radio]:checked + label {
+  background: gray;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
