@@ -12,25 +12,27 @@
 body {
   font-size: 1.6rem;
   background: gray;
-  overflow: hidden;
-  height: 100vh;
 }
 
 .container {
   display: grid;
   grid-template-columns: calc(100% - 70%) auto;
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  animation: slideRight .5s linear;
 }
 
 .left-container {
   position: relative;
   background-color: bisque;
+  height: 100vh;
 }
 
 .left-container h1 {
-  padding: 30px;
-  margin-top: 55px;
-  font-size: 4rem;
+  padding: 3rem;
+  margin-top: 4rem;
+  font-size: 5rem;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -63,7 +65,7 @@ form {
 }
 
 .right-container input, .right-container label {
-  color: rgba(0, 0, 0, 0.8);
+  color: rgba(0, 0, 0, 0.877);
 }
 
 .radio-container {
@@ -140,4 +142,61 @@ input[type=radio] {
 .radio-container input[type=radio]:checked + label {
   background: gray;
   border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+button {
+  bottom: 0;
+  font-size: 1.8rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  color: bisque;
+  background-color: rgba(0, 0, 0, 0.685);
+  height: 40px;
+  line-height: 38px;
+  margin-top: 28px;
+  border-radius: 8px;
+  font-family: "Open Sans", sans-serif;
+
+  cursor: pointer;
+}
+
+.left-container img {
+  animation: moveUp .5s normal;
+}
+
+@media(max-width: 800px) {
+  .container{
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+  }
+
+  .left-container img{
+    display: none;
+  }
+
+  .right-container {
+    width: auto;
+    height: auto;
+  }
+
+  .form-container {
+    padding: 60px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  form {
+    margin: 0;
+  }
+
+}
+
+@keyframes moveUp {
+  from{bottom: -500px;}
+  to{bottom: 0;}
+}
+
+@keyframes slideRight {              
+  0% { opacity: 0; transform: translateX(30px); }                
+  100% { opacity: 1; transform: translateX(0);   }
 }
